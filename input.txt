@@ -1,2 +1,2 @@
-日本語の文章の中にhankaku no e-jiを入力する際、
-その前後にhankaku space wo入れるとkanari読みやすくなります
+日本語の文章の中にhankakuのe-jiを入力する際、
+その前後にhankakuスペースを入れるとkanari読みやすくなります

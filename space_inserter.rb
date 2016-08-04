@@ -1,11 +1,8 @@
-require 'open-uri'
-
 def read_file(path)
   lines = []
   begin
     File.open(path) do |file|
       file.read.split("\n").each do |line|
-        # puts line
         lines << line
       end
     end
@@ -36,14 +33,15 @@ def write_file(path, lines, ask)
 end
 
 def convert(text, regxp, ask)
+  before = text
   index = text =~ regxp
   while index
     last_i = index
     replaced = text.clone.insert(index + 1, ' ')
-    puts text
-    puts replaced
 
     if ask
+      puts text
+      puts replaced
       print 'Looks better? [y/n]: '
       user_input = gets.gsub("\n", '')
     else
@@ -65,11 +63,9 @@ def convert(text, regxp, ask)
       break
     end
   end
+  puts "Before: #{before}"
+  puts "After:  #{text}"
   text
-end
-
-def insert_space
-
 end
 
 mode = ''
